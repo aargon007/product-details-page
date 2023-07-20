@@ -22,7 +22,7 @@ const ProductDetails = async () => {
 
 	return (
 		<>
-			<div className="flex mt-2 gap-5">
+			<div className="flex flex-col md:flex-row mt-2 gap-5">
 				<div className="w-full">
 					<ProductImageSlider images={images} />
 				</div>
@@ -97,7 +97,7 @@ const ProductDetails = async () => {
 					</div>
 				</div>
 			</div>
-            <div className="mt-5 bg-gray-100 px-5 py-5 rounded-md">
+            <div className="mt-5 bg-gray-50 px-5 py-5 rounded-md">
                 <TabsDescriptionReviews description={description} reviewsData={reviewsData}/>
             </div>
 		</>

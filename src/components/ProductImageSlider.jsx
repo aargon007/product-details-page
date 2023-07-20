@@ -40,7 +40,7 @@ const ProductImageSlider = ({images}) => {
 				))}
 			</div>
             {/* carousel slider with zoom  */}
-			<div className="w-10/12 rounded-md">
+			<div className="w-11/12 md:w-10/12 rounded-md">
 				<CarouselProvider
 					visibleSlides={1}
 					totalSlides={images.length}
