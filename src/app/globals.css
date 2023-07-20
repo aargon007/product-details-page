@@ -18,3 +18,8 @@
 		@apply text-black font-semibold px-3 py-3 rounded-md  bg-pink-200 hover:bg-pink-300;
 	}
 }
+/* Image Zoom on Hover */
+.mySwiper img:hover {
+	transform: scale(1.2);
+	transition: transform 0.3s ease-in-out;
+  }
