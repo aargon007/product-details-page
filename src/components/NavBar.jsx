@@ -25,8 +25,8 @@ const NavBar = () => {
 				<>
 					<div className="mx-auto px-5 md:px-12 lg:px-28 md:shadow-lg shadow-md">
 						<div className="relative flex h-16 items-center justify-between">
+							{/* Mobile menu button*/}
 							<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-								{/* Mobile menu button*/}
 								<Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-700 hover:text-white outline-none">
 									<span className="sr-only">Open main menu</span>
 									{open ? (
@@ -84,7 +84,7 @@ const NavBar = () => {
 							<div className="space-y-2 px-2 pb-5 mt-3">
 								<Link
 									className={
-										pathname === "/" ? "active py-2 rounded-md" : "default"
+										pathname === "/" ? "active py-2 rounded-md hover:bg-gray-100" : "default"
 									}
 									href="/"
 								>

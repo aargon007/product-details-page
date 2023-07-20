@@ -1,18 +1,17 @@
-import React from 'react';
+import getProductInfo from '@/utils/getProductInfo';
+import getProductReviews from '@/utils/getProductReviews';
 
-const ProductDetails = () => {
+const ProductDetails =async () => {
     // Fetch the product and reviews data from your API or JSON file
-  const productData = {
-    /* Product data */
-  };
+  const productData =await getProductInfo();
+  console.log(productData);
 
-  const reviewsData = [
-    /* Reviews data */
-  ];
+  const reviewsData = await getProductReviews();
+  console.log(reviewsData);
 
   return (
     <div>
-        
+
     </div>
   );
 };

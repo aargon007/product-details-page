@@ -1,0 +1,43 @@
+{
+    "product": {
+        "name": "GIRL'S KNIT CAPE",
+        "description": "Elevate your outfit with a trendy flayer sleeve cape featuring a captivating printed design. This stylish accessory adds a fashionable and eye-catching touch, enhancing your overall look effortlessly.",
+        "price": "$19.99",
+        "images": [
+            "https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/Hqt9spUo6sCDkTgAZmBImpz1tCFIxClKtOzGTOCK.jpg",
+            "https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/psYco6U9UouqfAwhgNuyBSfdy3fqn2xBGjKnZz3A.jpg",
+            "https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/ou2zFxh8gFFrsfiF769Czjj7QlgtEIyLGgV7mFws.jpg"
+        ],
+        "category": [
+            "Women",
+            "Girls"
+        ],
+        "colors": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "sizes": [
+            "Small",
+            "Medium",
+            "Large"
+        ]
+    },
+    "reviews": [
+        {
+            "username": "Ali Hossain",
+            "rating": 4,
+            "comment": "Great product! Highly recommended."
+        },
+        {
+            "username": "Shaila",
+            "rating": 5,
+            "comment": "Excellent quality and fast shipping."
+        },
+        {
+            "username": "Mina",
+            "rating": 3,
+            "comment": "Average product. Could be better."
+        }
+    ]
+}
