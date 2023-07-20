@@ -11,21 +11,21 @@ const NavBar = () => {
 
 	const collectionWear = [
 		{ name: "Kids", href: "/", current: false },
-		{ name: "Men", href: "/men-collection", current: false },
-		{ name: "Women", href: "/women-colection", current: false },
+		{ name: "Men", href: "/#top", current: false },
+		{ name: "Women", href: "/#top", current: false },
 	];
 
 	const menuList = [
-		{ name: <FaRegHeart />, href: "/wishlist", current: false },
-		{ name: <FaShoppingCart />, href: "/cart", current: false },
-		{ name: "Login", href: "/login", current: false },
+		{ name: <FaRegHeart />, href: "/#top", current: false },
+		{ name: <FaShoppingCart />, href: "/#top", current: false },
+		{ name: "Login", href: "/#top", current: false },
 	];
 
 	return (
 		<Disclosure as="nav" className="">
 			{({ open }) => (
 				<>
-					<div className="mx-auto px-5 md:px-12 lg:px-28 md:shadow-lg shadow-md">
+					<div className="mx-auto px-5 md:px-12 lg:px-28 md:shadow-lg shadow-md" id="top">
 						<div className="relative flex h-16 items-center justify-between">
 							{/* Mobile menu button*/}
 							<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
