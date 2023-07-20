@@ -9,12 +9,7 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 
-const ProductImageSlider = () => {
-	const images = [
-		"https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/Hqt9spUo6sCDkTgAZmBImpz1tCFIxClKtOzGTOCK.jpg",
-		"https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/psYco6U9UouqfAwhgNuyBSfdy3fqn2xBGjKnZz3A.jpg",
-		"https://sailors3bucket1.s3.ap-southeast-1.amazonaws.com/uploads/all/ou2zFxh8gFFrsfiF769Czjj7QlgtEIyLGgV7mFws.jpg",
-	];
+const ProductImageSlider = ({images}) => {
 
 	const [activeSlide, setActiveSlide] = useState(0);
 
@@ -25,7 +20,7 @@ const ProductImageSlider = () => {
 	return (
 		<div className="flex">
 			{/* Left Side Image Navigation */}
-			<div className="mr-4 w-1/6">
+			<div className="mr-4 w-1/12">
 				{images.map((image, index) => (
 					<div
 						key={index}
@@ -45,7 +40,7 @@ const ProductImageSlider = () => {
 				))}
 			</div>
             {/* carousel slider with zoom  */}
-			<div className="w-5/6">
+			<div className="w-10/12 rounded-md">
 				<CarouselProvider
 					visibleSlides={1}
 					totalSlides={images.length}
