@@ -1,17 +1,19 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import { HiMenu, HiX } from "react-icons/hi";
-import {
-	FaShopify,
-	FaShoppingCart,
-	FaRegHeart,
-} from "react-icons/fa";
+import { FaShopify, FaShoppingCart, FaRegHeart } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SearchBar from "./SearchBar";
 
 const NavBar = () => {
 	const pathname = usePathname();
+
+	const collectionWear = [
+		{ name: "Kids", href: "/", current: false },
+		{ name: "Men", href: "/men-collection", current: false },
+		{ name: "Women", href: "/women-colection", current: false },
+	];
 
 	const menuList = [
 		{ name: <FaRegHeart />, href: "/wishlist", current: false },
@@ -47,12 +49,15 @@ const NavBar = () => {
 							{/* category navigation section  */}
 							<div className="hidden md:ml-6 md:block">
 								<div className="flex space-x-4">
-									<Link
-										className={pathname === "/" ? "active" : "default"}
-										href="/"
-									>
-										Products
-									</Link>
+									{collectionWear?.map((coll, index) => (
+										<Link
+											key={index}
+											className={pathname === coll?.href ? "active" : "default"}
+											href={coll?.href}
+										>
+											{coll?.name}
+										</Link>
+									))}
 								</div>
 							</div>
 							{/* main navigation section  */}
@@ -78,32 +83,44 @@ const NavBar = () => {
 							</div>
 						</div>
 					</div>
-                    {/* mobile device menu  */}
+					{/* mobile device menu  */}
 					<Disclosure.Panel className="md:hidden">
 						{({ close }) => (
-							<div className="space-y-2 px-2 pb-5 mt-3">
+							<div className="space-y-2 px-2 mt-3">
+								{collectionWear?.map((coll, index) => (
+									<Link
+										onClick={close}
+										key={index}
+										className={
+											pathname === coll?.href
+												? "active py-2 rounded-md hover:bg-gray-100"
+												: "default"
+										}
+										href={coll?.href}
+									>
+										{coll?.name}
+									</Link>
+								))}
+
 								<Link
-									className={
-										pathname === "/" ? "active py-2 rounded-md hover:bg-gray-100" : "default"
-									}
-									href="/"
-								>
-									Products
-								</Link>
-								<Link
+									onClick={close}
 									className={pathname === "/wishlist" ? "active" : "default"}
 									href="/wishlist"
 								>
 									My Wishlist <FaRegHeart className="inline ml-2" />
 								</Link>
+
 								<Link
+									onClick={close}
 									className={pathname === "/cart" ? "active" : "default"}
 									href="/cart"
 								>
 									<span>My Cart</span>{" "}
 									<FaShoppingCart className="inline ml-2" />
 								</Link>
+								
 								<Link
+									onClick={close}
 									className={pathname === "/login" ? "active" : "default"}
 									href="/login"
 								>

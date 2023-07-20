@@ -34,6 +34,8 @@ const TabsDescriptionReviews = ({ description, reviewsData }) => {
 					Reviews
 				</Tab>
 			</Tab.List>
+
+			
 			<Tab.Panels className="mt-2">
 				<Tab.Panel>
 					<div className="">

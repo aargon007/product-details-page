@@ -4,6 +4,7 @@ import ProductImageSlider from "./ProductImageSlider";
 import {
 	FaFacebook,
 	FaLinkedinIn,
+	FaShoppingCart,
 	FaTwitter,
 	FaWhatsapp,
 } from "react-icons/fa";
@@ -25,9 +26,9 @@ const ProductDetails = async () => {
 				<div className="w-full">
 					<ProductImageSlider images={images} />
 				</div>
-				<div className="w-full space-y-6 text-2xl font-medium">
+				<div className="w-full space-y-6 text-xl font-medium">
 					<h1 className="text-3xl font-medium">{name}</h1>
-					<p>Price : ৳ {price}</p>
+					<p>Price : ৳{price}</p>
 					<p>
 						Color :{" "}
 						{colors.map((color) => (
@@ -45,13 +46,13 @@ const ProductDetails = async () => {
 						))}
 					</p>
 					<p>
-						Category : <span className="text-xl">{category.join(", ")}</span>
+						Category : <span className="text-lg">{category.join(", ")}</span>
 					</p>
 					<p>Available Stock : 5</p>
 
 					<div className="flex gap-4">
-						<button className="bg-gray-900 text-white py-2 px-3 rounded-md text-base">
-							Add To Cart
+						<button className="bg-gray-900 text-white py-2 px-3 rounded-md text-base flex items-center gap-2">
+							<FaShoppingCart/> Add To Cart
 						</button>
 						<button className="bg-gray-900 text-white py-2 px-3 rounded-md text-base">
 							Buy Now
@@ -65,30 +66,30 @@ const ProductDetails = async () => {
 						<span className="text-xl">Share : </span>
 						<div className="flex gap-4">
 							<Link
-								href=""
+								href="https://www.facebook.com/"
 								target="_blank"
-								className="text-white rounded-md px-3 py-2 text-2xl bg-blue-800"
+								className="text-white rounded-md px-3 py-2 text-xl bg-blue-800"
 							>
 								<FaFacebook />
 							</Link>
 							<Link
-								href=""
+								href="https://www.whatsapp.com/"
 								target="_blank"
-								className="text-white rounded-md px-3 py-2 text-2xl bg-green-600"
+								className="text-white rounded-md px-3 py-2 text-xl bg-green-600"
 							>
 								<FaWhatsapp />
 							</Link>
 							<Link
-								href=""
+								href="https://www.linkedin.com/"
 								target="_blank"
-								className="text-white rounded-md px-3 py-2 text-2xl bg-blue-600"
+								className="text-white rounded-md px-3 py-2 text-xl bg-blue-600"
 							>
 								<FaLinkedinIn />
 							</Link>
 							<Link
-								href=""
+								href="https://twitter.com/"
 								target="_blank"
-								className="text-white rounded-md px-3 py-2 text-2xl bg-sky-600"
+								className="text-white rounded-md px-3 py-2 text-xl bg-sky-600"
 							>
 								<FaTwitter />
 							</Link>
@@ -96,6 +97,8 @@ const ProductDetails = async () => {
 					</div>
 				</div>
 			</div>
+
+			
             <div className="mt-5 bg-gray-50 px-5 py-5 rounded-md">
                 <TabsDescriptionReviews description={description} reviewsData={reviewsData}/>
             </div>

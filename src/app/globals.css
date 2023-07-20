@@ -4,7 +4,7 @@
 
 @layer components {
 	.active {
-		@apply text-[#ef4a23] block px-2 md:px-0 text-lg md:border-b-2 border-[#ef4a23] font-medium;
+		@apply text-[#ef4a23] block px-2 pt-2 text-lg md:border-b-2 border-[#ef4a23] font-medium;
 	}
 
 	.default {
