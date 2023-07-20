@@ -13,12 +13,11 @@ import TabsDescriptionReviews from "./TabsDescriptionReviews";
 const ProductDetails = async () => {
 	// Fetch the product and reviews data from your API or JSON file
 	const productData = await getProductInfo();
-	console.log(productData);
+
 	const { name, description, price, images, category, colors, sizes } =
 		productData;
 
 	const reviewsData = await getProductReviews();
-	//   console.log(reviewsData);
 
 	return (
 		<>
